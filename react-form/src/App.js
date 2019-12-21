@@ -18,8 +18,8 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <BasicNav/>
+        <BasicForm />
       </ThemeProvider>
-      <BasicForm />
     </div>
   );
 }

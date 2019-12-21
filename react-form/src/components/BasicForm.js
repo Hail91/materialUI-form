@@ -12,11 +12,11 @@ const useStyles = makeStyles(theme => ({
         margin: '0 auto'
     },
     input: {
-        marginTop: 50
+        marginTop: 50,
     },
     loginBtn: {
         marginTop: 25
-    }
+    },
   }));
 
   const BasicForm = () => {
@@ -29,8 +29,8 @@ const useStyles = makeStyles(theme => ({
     // });
     
     return (
-        <div>
-            <h1>Log in</h1>
+        <div className="form">
+            <h1>Get Cooking!</h1>
             <MaterialUIForm className={classes.root}>
                 <TextField
                     required
@@ -50,6 +50,9 @@ const useStyles = makeStyles(theme => ({
                 />
                 <Button variant="contained" color="primary" className={classes.loginBtn}>
                     Login
+                </Button>
+                <Button variant="contained" color="primary" className={classes.loginBtn}>
+                    Register
                 </Button>
             </MaterialUIForm>
         </div>

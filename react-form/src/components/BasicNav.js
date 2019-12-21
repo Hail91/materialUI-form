@@ -8,6 +8,9 @@ const useStyles = makeStyles(theme => ({
     root: {
         flexGrow: 1,
     },
+    title: {
+        fontSize: 25
+    }
 }));
 
 const BasicNav = () => {
@@ -18,8 +21,8 @@ const BasicNav = () => {
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
-                    <Typography>
-                        Chef Portfolio
+                    <Typography className={classes.title}>
+                        <i class="fas fa-utensils"> Chef Portfolio</i>
                     </Typography>
                 </Toolbar>
             </AppBar>
