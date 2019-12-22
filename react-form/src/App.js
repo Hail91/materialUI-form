@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
-import BasicForm from './components/BasicForm';
+import LoginForm from './components/LoginForm';
+import RegisterForm from './components/RegisterForm';
 import BasicNav from './components/BasicNav';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
+import { Route } from 'react-router-dom';
 
 const theme = createMuiTheme({
   typography: {
@@ -18,7 +20,8 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <BasicNav/>
-        <BasicForm />
+        <Route exact path="/" component={LoginForm} />
+        <Route path="/register" component={RegisterForm} />
       </ThemeProvider>
     </div>
   );

@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-  const BasicForm = () => {
+  const LoginForm = () => {
 
     const classes = useStyles();
     
@@ -59,4 +59,4 @@ const useStyles = makeStyles(theme => ({
     )
 }
 
-export default BasicForm;
+export default LoginForm;
