@@ -12,16 +12,21 @@ const useStyles = makeStyles(theme => ({
         margin: '0 auto'
     },
     input: {
-        marginTop: 50,
+        marginTop: 30,
     },
     loginBtn: {
         marginTop: 25
     },
   }));
 
-  const LoginForm = () => {
+  const LoginForm = (props) => {
 
     const classes = useStyles();
+
+    const toRegister = event => {
+        event.preventDefault();
+        props.history.push('/register');
+    };
     
     // const [user, setUser] = useState({
     //     name: userName,
@@ -51,7 +56,7 @@ const useStyles = makeStyles(theme => ({
                 <Button variant="contained" color="primary" className={classes.loginBtn}>
                     Login
                 </Button>
-                <Button variant="contained" color="primary" className={classes.loginBtn}>
+                <Button onClick={toRegister} variant="contained" color="primary" className={classes.loginBtn}>
                     Register
                 </Button>
             </MaterialUIForm>
