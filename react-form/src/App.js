@@ -6,6 +6,7 @@ import BasicNav from './components/BasicNav';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import { Route } from 'react-router-dom';
+import Splash from './components/Splash';
 
 const theme = createMuiTheme({
   typography: {
@@ -18,9 +19,10 @@ const theme = createMuiTheme({
 function App() {
   return (
     <div className="App">
+      <Route exact path="/" component={Splash}/>
       <ThemeProvider theme={theme}>
         <BasicNav/>
-        <Route exact path="/" component={LoginForm} />
+        <Route path="/login" component={LoginForm} />
         <Route path="/register" component={RegisterForm} />
       </ThemeProvider>
     </div>
