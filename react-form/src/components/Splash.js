@@ -13,21 +13,35 @@ const useStyles = makeStyles(theme => ({
       height: 250,
       display: 'flex',
       flexDirection: 'column',  
-      justifyContent: 'center'
+      justifyContent: 'center',
+      backgroundColor: 'rgba(89, 171, 227, 1)'
     },
     containerStyle: {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+    },
+    splashbtns: {
+        width: 100,
+        marginTop: 20
+    },
+    btnCont: {
+        display: 'flex',
+        justifyContent: 'space-evenly'
     },
   }));                    
                     
 
 
-const Splash = () => {
+const Splash = (props) => {
 
     const classes = useStyles();
+
+    const chefLogin = event => {
+        event.preventDefault();
+        props.history.push('/login');
+    };
     
     return (
         <div>
@@ -36,11 +50,19 @@ const Splash = () => {
                 <Container className={classes.containerStyle} maxWidth="100%" style = {{backgroundColor:'rgba(0,0,0,.87)', height: '100vh', width: '100vw'}} >
                     <Paper className={classes.root}>
                         <Typography variant="h4" component="h3">
-                        Welcome to Chef Portfolio!
+                            Welcome to Chef Portfolio!
                         </Typography>
                         <Typography component="p">
-                        Are you a Chef or a Foodie?
+                            Are you a Chef or a Foodie?
                         </Typography>
+                        <div className={classes.btnCont}>
+                            <Button onClick={chefLogin} className={classes.splashbtns} variant="contained" color="primary">
+                                Chef
+                            </Button>
+                            <Button className={classes.splashbtns} variant="contained" color="primary">
+                                Foodie
+                            </Button>
+                        </div>
                     </Paper>
                 </Container>
             </React.Fragment>
