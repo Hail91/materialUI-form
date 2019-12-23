@@ -3,6 +3,7 @@ import MaterialUIForm from 'react-material-ui-form';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import BasicNav from './BasicNav';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -35,6 +36,7 @@ const useStyles = makeStyles(theme => ({
     
     return (
         <div className="form">
+            <BasicNav/>
             <h1>Get Cooking!</h1>
             <MaterialUIForm className={classes.root}>
                 <TextField

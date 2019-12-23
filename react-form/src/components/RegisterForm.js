@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
+import BasicNav from './BasicNav';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -27,6 +28,7 @@ const useStyles = makeStyles(theme => ({
     
     return (
         <div className="form">
+            <BasicNav/>
             <h1>Register</h1>
             <MaterialUIForm className={classes.root}>
                 <TextField
@@ -64,7 +66,7 @@ const useStyles = makeStyles(theme => ({
                     Register
                 </Button>
                 <Typography>
-                    <p>Already have an account? <Link to="/">Login</Link></p>
+                    <p>Already have an account? <Link to="/login">Login</Link></p>
                 </Typography>
             </MaterialUIForm>
         </div>
