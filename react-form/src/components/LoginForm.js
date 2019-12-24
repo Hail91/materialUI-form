@@ -28,12 +28,7 @@ const useStyles = makeStyles(theme => ({
         event.preventDefault();
         props.history.push('/register');
     };
-    
-    // const [user, setUser] = useState({
-    //     name: userName,
-    //     password: pass
-    // });
-    
+   
     return (
         <div className="form">
             <BasicNav/>
