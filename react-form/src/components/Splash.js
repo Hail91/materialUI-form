@@ -42,6 +42,11 @@ const Splash = (props) => {
         event.preventDefault();
         props.history.push('/login');
     };
+
+    const userDirect = event => {
+        event.preventDefault();
+        props.history.push('/recipemarket');
+    };
     
     return (
         <div>
@@ -59,7 +64,7 @@ const Splash = (props) => {
                             <Button onClick={chefLogin} className={classes.splashbtns} variant="contained" color="primary">
                                 Chef
                             </Button>
-                            <Button className={classes.splashbtns} variant="contained" color="primary">
+                            <Button onClick={userDirect} className={classes.splashbtns} variant="contained" color="primary">
                                 Foodie
                             </Button>
                         </div>

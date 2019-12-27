@@ -22,9 +22,14 @@ const useStyles = makeStyles(theme => ({
     },
   }));
 
-  const RegisterForm = () => {
+  const RegisterForm = (props) => {
 
     const classes = useStyles();
+
+    const chefDirect = event => {
+        event.preventDefault();
+        props.history.push('/dashboard');
+    };
     
     return (
         <div className="form">
@@ -62,7 +67,7 @@ const useStyles = makeStyles(theme => ({
                     variant="filled"
                     className={classes.input}
                 />
-                <Button variant="contained" color="primary" className={classes.loginBtn}>
+                <Button onClick={chefDirect} variant="contained" color="primary" className={classes.loginBtn}>
                     Register
                 </Button>
                 <Typography>
