@@ -10,7 +10,7 @@ import Collapse from '@material-ui/core/Collapse';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import { blue } from '@material-ui/core/colors';
+import { teal, grey } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -19,12 +19,15 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 290,
+    backgroundColor: teal[400],
+    boxShadow: '1px 5px 5px 5px grey'
   },
   media: {
     height: 0,
     paddingTop: '56.25%',
     width: 250,
-    margin: '0 auto'
+    margin: '0 auto',
+    borderRadius: 10
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -37,8 +40,13 @@ const useStyles = makeStyles(theme => ({
     transform: 'rotate(180deg)',
   },
   avatar: {
-    backgroundColor: blue[500],
+    backgroundColor: grey[800],
   },
+  info: {
+      borderTop: '1px solid black',
+      marginLeft: 20,
+      marginRight: 20,
+  }
 }));
 
 export default function RecipeCard() {
@@ -95,32 +103,35 @@ export default function RecipeCard() {
         </IconButton>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Method:</Typography>
+        <CardContent className={classes.info}>
+          <Typography paragraph>Ingredients:</Typography>
           <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-            minutes.
+            1 teaspoon ground cinnamon
+            <br/>
+            1/4 teaspoon ground nutmeg
+            <br/>
+            2 tablespoons sugar
+            <br/>
+            4 tablespoons butter
+            <br/>
+            4 eggs
+            <br/>
+            1/4 cup milk
+            <br/>
+            1/2 teaspoon vanilla extract
+            <br/>
+            8 slices challah, brioche, or white bread
+            <br/>
+            1/2 cup maple syrup, warmed
           </Typography>
           <Typography paragraph>
-            Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
-            heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
-            browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken
-            and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and
-            pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add
-            saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
-          </Typography>
-          <Typography paragraph>
-            Add rice and stir very gently to distribute. Top with artichokes and peppers, and cook
-            without stirring, until most of the liquid is absorbed, 15 to 18 minutes. Reduce heat to
-            medium-low, add reserved shrimp and mussels, tucking them down into the rice, and cook
-            again without stirring, until mussels have opened and rice is just tender, 5 to 7
-            minutes more. (Discard any mussels that don’t open.)
-          </Typography>
-          <Typography>
-            Set aside off of the heat to let rest for 10 minutes, and then serve.
+            1. In a small bowl, combine cinnamon, nutmeg, and sugar and set aside briefly.
+            <br/>
+            2. In a 10-inch or 12-inch skillet, melt butter over medium heat. Whisk together cinnamon mixture, eggs, milk, and vanilla and pour into a shallow container such as a pie plate. 
+            Dip bread in egg mixture. Fry slices until golden brown, then flip to cook the other side. Serve with syrup.     
           </Typography>
         </CardContent>
       </Collapse>
     </Card>
   );
-}
+};
