@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   card: {
     maxWidth: 290,
     backgroundColor: teal[400],
-    boxShadow: '1px 5px 5px 5px grey'
+    boxShadow: '1px 5px 5px 5px grey',
   },
   media: {
     height: 0,
