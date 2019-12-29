@@ -7,7 +7,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import { Route } from 'react-router-dom';
 import Splash from './components/Splash';
 import ChefDashboard from './components/ChefDashboard';
-import recipeMarket from './components/recipeMarket';
+import RecipeMarket from './components/RecipeMarket';
 
 const theme = createMuiTheme({
   typography: {
@@ -26,7 +26,7 @@ function App() {
         <Route path="/login" component={LoginForm} />
         <Route path="/register" component={RegisterForm} />
         <Route path="/dashboard" component={ChefDashboard} />
-        <Route path="/recipemarket" component={recipeMarket} />
+        <Route path="/recipemarket" component={RecipeMarket} />
       </ThemeProvider>
     </div>
   );

@@ -8,5 +8,10 @@
   font-family: 'Kalam';
 }
 
+.recipes-container {
+  display: flex;
+  justify-content: center;
+}
+
 
 

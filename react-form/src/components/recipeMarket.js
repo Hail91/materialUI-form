@@ -1,14 +1,18 @@
 import React from 'react';
+import RecipeCard from './RecipeCard';
 
- const recipeMarket = () => {
+ const RecipeMarket = () => {
     
     return (
         <div>
             <div className="mkt-title">
                 <h1>Chef Portfolio</h1>
             </div>
+            <div className="recipes-container">
+                <RecipeCard />
+            </div>
         </div>
     );
 };
 
-export default recipeMarket;
+export default RecipeMarket;
